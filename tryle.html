@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  p {
+    line-height: 1.6;
+  }
+  
+  .team-slider {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  .team-slider img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .team-slider .slide {
+    display: none;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  .team-slider .slide.active {
+    display: block;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>About Us</h1>
+</header>
+
+<div class="container">
+  <section>
+    <h2>Our Team</h2>
+    <div class="team-slider">
+      <div class="slide active">
+        <img src="img1.jpg" alt="Team Member 1">
+      </div>
+      <div class="slide">
+        <img src="img2.jpg" alt="Team Member 2">
+      </div>
+      <div class="slide">
+        <img src="img3.jpg" alt="Team Member 3">
+      </div>
+    </div>
+  </section>
+  
+  <section>
+    <h2>ad's</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mauris justo, malesuada a sapien nec, feugiat fringilla nisi. Nullam in leo lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce rhoncus lacus non neque pretium, eget venenatis sapien aliquam. Duis vitae aliquet ligula.</p>
+    <p>Curabitur scelerisque justo in consequat aliquam. Donec vel varius sapien. Sed quis efficitur elit. Phasellus suscipit augue quis ligula interdum, non fermentum est rutrum. Morbi ac nisl a diam condimentum fermentum ac id ex. Donec vitae quam nec urna mollis maximus. Proin sodales nibh id mi dictum, a facilisis eros accumsan. Ut euismod purus vitae nunc elementum, vel finibus est viverra.</p>
+  </section>
+  
+  <section>
+    <h2>Contact Us</h2>
+    <div class="dropdown">
+      <span>Choose a department:</span>
+      <div class="dropdown-content">
+        <a href="#">Sales</a>
+        <a href="#">Support</a>
+        <a href="#">General Inquiry</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  &copy; 2024 Our Company. All rights reserved.
+</footer>
+
+<script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll('.slide');
+  
+  function showSlide(index) {
+    if (index >= slides.length) {slideIndex = 0;}
+    if (index < 0) {slideIndex = slides.length - 1;}
+    
+    slides.forEach((slide) => {
+      slide.classList.remove('active');
+    });
+    
+    slides[slideIndex].classList.add('active');
+  }
+  
+  setInterval(() => {
+    slideIndex++;
+    showSlide(slideIndex);
+  }, 3000);
+</script>
+
+</body>
+</html>

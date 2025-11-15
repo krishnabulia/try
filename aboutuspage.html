@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: #ffffff;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        nav {
+            float: right;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        nav li {
+            display: inline-block;
+            margin-left: 70px;
+            padding-top: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 14px;
+            color: #333;
+        }
+
+        nav a:hover {
+            color: #1E90FF;
+        }
+
+        .main {
+            padding: 20px 0;
+        }
+
+        button {
+            display: block;
+            width: 200px;
+            height: 40px;
+            margin: 20px auto;
+            background-color: #1E90FF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .contact-page {
+            display: none;
+        }
+
+        .contact-page p {
+            color: #333;
+            font-size: 16px;
+        }
+ *{
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+ font-family: 'poppins',sans-serif; 
+}
+.about{
+  min-height: 100vh;
+  width: 100%;
+  padding: 78px 0px;
+  background-color: #191919;
+}
+.about img{
+  border: 2px solid #f30a0a;
+  box-shadow: 0 0 5px #f30a0a;
+              0 0 25px #f30a0a;
+  height: auto;
+  width: 50%;
+  border-radius: 5em;
+  transition: 0.5s ease; 
+}
+.about img:hover{
+  transform: scale(90%);
+  box-shadow: 0 0 5px #f30a0a;
+              0 0 25px #f30a0a;          
+}
+.main{
+  width: 1200px;
+  max-width: 95%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.about-text h1{
+  color: white;
+  font-size: 80px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+.about-text h5{
+  color: white;
+  font-size: 28px;
+  text-transform: 25px;
+  margin-bottom: 0.4em;
+}
+span{
+  color: #f30a0a
+}
+.about-text p{
+  color: rgb(255,236,236,0.8);
+  letter-spacing: 1px;
+  line-height: 28px;
+  font-size: 18px;
+  margin-bottom: 45px;
+}
+button{
+  background: transparent;
+  color:#f30a0a;
+  font-size: 16px;
+  text-decoration: none;
+  border: 2px solid #f30a0a;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-radius: 30px;
+  transition: .4 ease;
+}
+button:hover{
+  background: #fa0202;
+  color: white;
+  border: 2px solid #f30a0a;
+  box-shadow: 0 0 5px #f30a0a;
+              0 0 25px #f30a0a;
+  cursor: pointer;
+  transform: scale(1.2);           
+}
+.talk{
+  margin-left: 5em;
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Toyland</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="about">
+        <div class="main">
+           <img src="img1.jpg" alt="Image 1">
+           <div class="about-text"><section>
+             <h1>about me</h1>
+             <h5>Web Development
+             <span>& designer</span>
+             </h5>
+           <p>
+            i am ..........................................................
+            .............................
+            .................................
+            .................................
+            ... ..............................................
+            </p>
+            </section>
+           <button type="button" class="talk">let's talk</button>
+           </div>
+        </div>
+        </section>	   
+ <div class="container main">
+        <button onclick="showContactPage()">Contact Us</button>
+        
+        <div class="contact-page">
+            <p>Email: mlv.tech@gmail.com</p>
+            <p>Phone: 82791898</p>
+            <p>Address: Pratap nagar , Bhilwara 311001 </p>
+        </div>
+    </div>
+
+    <script>
+        function showContactPage() {
+            var contactPage = document.querySelector('.contact-page');
+            contactPage.style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
